@@ -94,11 +94,14 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight hero-text-gradient">
-              Automate Your SEO Content With <span className="inline-block min-w-[15rem] relative">
+              Automate Your SEO Content With
+            </h1>
+            <div className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary">
+              <span className="inline-block min-w-[15rem] relative">
                 {typedText}
                 <span className="absolute top-0 right-0 h-full w-[3px] bg-primary/70 animate-border-pulse"></span>
               </span>
-            </h1>
+            </div>
             
             <p className="text-lg md:text-xl text-muted-foreground">
               SEOBot automatically generates high-performing blog content optimized for search engines by analyzing trending topics and crafting engaging articles that drive traffic.
