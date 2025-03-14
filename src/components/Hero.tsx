@@ -103,6 +103,10 @@ const Hero = () => {
               </span>
             </div>
             
+            <p className="text-lg md:text-xl text-muted-foreground">
+              SEOBot automatically generates high-performing blog content optimized for search engines by analyzing trending topics and crafting engaging articles that drive traffic.
+            </p>
+            
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
               <Button size="lg" className="group">
                 Get Started Free
@@ -211,7 +215,7 @@ const Hero = () => {
       </div>
       
       {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute bottom-0 left-0 right-0 -z-20">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
           <path
             fill="#FFFFFF"
