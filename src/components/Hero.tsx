@@ -82,13 +82,13 @@ const Hero = () => {
   return (
     <section className="relative pt-24 md:pt-32 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_60%,rgba(13,148,255,0.05),transparent)] dark:bg-[radial-gradient(45%_40%_at_50%_60%,rgba(13,148,255,0.05),transparent)]" />
-      <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left bg-white dark:bg-black skew-x-[-30deg] shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 dark:ring-indigo-300/10 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center transform-gpu opacity-30 blur-3xl" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_60%,rgba(90,49,240,0.1),transparent)]" />
+      <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left bg-white dark:bg-black skew-x-[-30deg] shadow-xl shadow-primary/10 ring-1 ring-primary/5 dark:ring-primary/10 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center transform-gpu opacity-30 blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
           <div className={`max-w-xl lg:max-w-2xl space-y-8 text-center lg:text-left transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-secondary text-primary text-sm font-medium mb-4">
               <span className="animate-pulse-slow">NEW</span>
               <span className="ml-2">AI-Powered Influencer Marketing Platform</span>
             </div>
@@ -99,7 +99,7 @@ const Hero = () => {
             <div className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary">
               <span className="inline-block relative">
                 {typedText}
-                <span className="absolute top-0 right-0 h-full w-[3px] bg-primary/70 animate-border-pulse"></span>
+                <span className="absolute top-0 right-0 h-full w-[3px] bg-primary animate-border-pulse"></span>
               </span>
             </div>
             <div className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight hero-text-gradient">
@@ -107,7 +107,7 @@ const Hero = () => {
             </div>
             
             <p className="text-lg md:text-xl text-muted-foreground">
-              ahalab connects advertisers with influential creators across social platforms using advanced AI matching, secure payments, and detailed analytics to maximize your campaign ROI.
+              Aha Platform connects advertisers with influential creators across social platforms using advanced AI matching, secure payments, and detailed analytics to maximize your campaign ROI.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
@@ -142,15 +142,19 @@ const Hero = () => {
           
           <div className={`relative w-full max-w-md lg:max-w-lg xl:max-w-xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-blue-600/20 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 mix-blend-overlay"></div>
               
               {/* Dashboard mockup */}
               <div className="bg-white rounded-2xl overflow-hidden">
                 {/* Dashboard header */}
-                <div className="bg-gradient-to-r from-primary/90 to-blue-600/90 px-6 py-4 flex items-center justify-between">
+                <div className="bg-gradient-to-r from-primary to-primary/80 px-6 py-4 flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <Users className="h-5 w-5 text-white" />
-                    <span className="text-white font-semibold">ahalab Dashboard</span>
+                    <img 
+                      src="/Aha ads-logo-2000x2000.png" 
+                      alt="Aha Platform" 
+                      className="h-5 w-5"
+                    />
+                    <span className="text-white font-semibold">Aha Dashboard</span>
                   </div>
                   <div className="flex space-x-1">
                     <div className="w-3 h-3 rounded-full bg-white/30"></div>
@@ -222,10 +226,10 @@ const Hero = () => {
                       Trending Categories
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Beauty</span>
-                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Tech</span>
-                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Fitness</span>
-                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Fashion</span>
+                      <span className="px-2 py-1 bg-secondary text-primary rounded-full text-xs">Beauty</span>
+                      <span className="px-2 py-1 bg-secondary text-primary rounded-full text-xs">Tech</span>
+                      <span className="px-2 py-1 bg-secondary text-primary rounded-full text-xs">Fitness</span>
+                      <span className="px-2 py-1 bg-secondary text-primary rounded-full text-xs">Fashion</span>
                     </div>
                   </div>
                 </div>
@@ -233,8 +237,8 @@ const Hero = () => {
             </div>
             
             {/* Decorative element */}
-            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -top-6 -left-6 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
           </div>
         </div>
       </div>

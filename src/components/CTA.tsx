@@ -6,15 +6,19 @@ import { Input } from '@/components/ui/input';
 const CTA = () => {
   return (
     <section className="py-20 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(40%_40%_at_50%_60%,rgba(13,148,255,0.08),transparent)] dark:bg-[radial-gradient(40%_40%_at_50%_60%,rgba(13,148,255,0.03),transparent)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(40%_40%_at_50%_60%,rgba(90,49,240,0.08),transparent)]" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-primary to-blue-600 rounded-3xl overflow-hidden shadow-xl">
+        <div className="bg-gradient-to-r from-primary to-indigo-400 rounded-3xl overflow-hidden shadow-xl">
           <div className="px-6 py-10 sm:px-12 sm:py-16 md:p-16 text-white">
             <div className="max-w-3xl mx-auto">
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-white/10 rounded-full">
-                  <Users className="h-10 w-10 text-white" strokeWidth={1.5} />
+                  <img 
+                    src="/Aha ads-logo-2000x2000.png" 
+                    alt="Aha Platform" 
+                    className="h-10 w-10"
+                  />
                 </div>
               </div>
               
@@ -23,7 +27,7 @@ const CTA = () => {
               </h2>
               
               <p className="text-lg md:text-xl text-center text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of brands that are scaling their marketing reach through ahalab's intelligent influencer matching platform.
+                Join thousands of brands that are scaling their marketing reach through Aha Platform's intelligent influencer matching technology.
               </p>
               
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl max-w-2xl mx-auto">
@@ -48,7 +52,7 @@ const CTA = () => {
         
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="inline-flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full mb-4">
+            <div className="inline-flex items-center justify-center bg-secondary w-16 h-16 rounded-full mb-4">
               <Globe className="text-primary h-8 w-8" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl font-semibold mb-2">Global Reach</h3>
@@ -58,7 +62,7 @@ const CTA = () => {
           </div>
           
           <div className="text-center">
-            <div className="inline-flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full mb-4">
+            <div className="inline-flex items-center justify-center bg-secondary w-16 h-16 rounded-full mb-4">
               <div className="flex items-center justify-center space-x-1">
                 <Instagram className="text-primary h-5 w-5" strokeWidth={1.5} />
                 <Youtube className="text-primary h-5 w-5" strokeWidth={1.5} />
@@ -72,7 +76,7 @@ const CTA = () => {
           </div>
           
           <div className="text-center">
-            <div className="inline-flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full mb-4">
+            <div className="inline-flex items-center justify-center bg-secondary w-16 h-16 rounded-full mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary h-8 w-8">
                 <path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path>
                 <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path>
