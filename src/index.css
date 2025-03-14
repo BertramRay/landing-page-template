@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -106,6 +105,11 @@
   .shimmer {
     @apply before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-shimmer before:z-0 overflow-hidden relative;
   }
+  
+  /* 打字机光标效果 */
+  .animate-border-pulse {
+    animation: borderPulse 1s infinite;
+  }
 }
 
 /* Custom scroll bar */
@@ -146,4 +150,14 @@
 .page-exit-active {
   opacity: 0;
   transition: opacity 300ms;
+}
+
+/* 定义打字机光标动画 */
+@keyframes borderPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }

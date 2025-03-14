@@ -1,14 +1,83 @@
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Bot, Search, TrendingUp, LayoutTemplate } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [typedText, setTypedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [textIndex, setTextIndex] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  const typingTimerRef = useRef<NodeJS.Timeout | null>(null);
+  
+  const textVariants = [
+    'AI Precision',
+    'AI Intelligence',
+    'Machine Learning',
+    'Neural Networks',
+    'Smart Algorithms'
+  ];
 
   useEffect(() => {
     setIsVisible(true);
+    
+    // 立即显示第一个文本，而不是等待打字效果
+    setTypedText(textVariants[0]);
+    
+    // 短暂延迟后开始删除效果，以便用户可以先看到完整文本
+    const initialTimer = setTimeout(() => {
+      setIsDeleting(true);
+    }, 2500);
+    
+    return () => {
+      clearTimeout(initialTimer);
+      if (typingTimerRef.current) {
+        clearTimeout(typingTimerRef.current);
+      }
+    };
   }, []);
+
+  useEffect(() => {
+    const currentText = textVariants[textIndex];
+    
+    // 清除之前的计时器
+    if (typingTimerRef.current) {
+      clearTimeout(typingTimerRef.current);
+    }
+    
+    typingTimerRef.current = setTimeout(() => {
+      if (!isDeleting) {
+        // 正在输入
+        setTypedText(currentText.substring(0, typedText.length + 1));
+        
+        // 如果完成了当前单词的输入
+        if (typedText.length === currentText.length) {
+          // 暂停一会后开始删除
+          setIsDeleting(true);
+          setTypingSpeed(2000); // 等待2秒后开始删除
+        } else {
+          // 随机打字速度，使效果更自然
+          setTypingSpeed(150 + Math.random() * 50);
+        }
+      } else {
+        // 正在删除
+        setTypedText(currentText.substring(0, typedText.length - 1));
+        setTypingSpeed(50); // 删除速度更快
+        
+        // 如果删除完毕
+        if (typedText.length === 0) {
+          setIsDeleting(false);
+          setTextIndex((textIndex + 1) % textVariants.length); // 切换到下一个文本
+        }
+      }
+    }, typingSpeed);
+    
+    return () => {
+      if (typingTimerRef.current) {
+        clearTimeout(typingTimerRef.current);
+      }
+    };
+  }, [typedText, isDeleting, textIndex, typingSpeed, textVariants]);
 
   return (
     <section className="relative pt-24 md:pt-32 overflow-hidden">
@@ -25,7 +94,10 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight hero-text-gradient">
-              Automate Your SEO Content With AI Precision
+              Automate Your SEO Content With <span className="inline-block min-w-[15rem] relative">
+                {typedText}
+                <span className="absolute top-0 right-0 h-full w-[3px] bg-primary/70 animate-border-pulse"></span>
+              </span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground">
