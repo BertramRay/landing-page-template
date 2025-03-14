@@ -111,13 +111,17 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
-              <Button size="lg" className="group">
-                Get Started Free
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="outline" size="lg">
-                See How It Works
-              </Button>
+              <a href="https://platform.ads.ahaglobal.io/login">
+                <Button size="lg" className="group">
+                  Get Started Free
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </a>
+              <a href="https://ads.ahaglobal.io/">
+                <Button variant="outline" size="lg">
+                  See How It Works
+                </Button>
+              </a>
             </div>
             
             <div className="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4">

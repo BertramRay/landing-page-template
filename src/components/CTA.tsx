@@ -31,13 +31,18 @@ const CTA = () => {
               </p>
               
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl max-w-2xl mx-auto">
-                <form className="flex flex-col sm:flex-row gap-4">
+                <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e) => {
+                  e.preventDefault();
+                  // 这里可以添加表单处理逻辑，或者重定向到注册页面
+                  window.location.href = 'https://platform.ads.ahaglobal.io/login';
+                }}>
                   <Input 
                     type="email" 
                     placeholder="Enter your email" 
                     className="flex-grow border-white/20 bg-white/10 text-white placeholder:text-white/60 focus:border-white"
+                    required
                   />
-                  <Button className="bg-white text-primary hover:bg-white/90 shrink-0 whitespace-nowrap group">
+                  <Button type="submit" className="bg-white text-primary hover:bg-white/90 shrink-0 whitespace-nowrap group">
                     Get Started Free
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>

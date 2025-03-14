@@ -14,6 +14,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  const handleSignIn = () => {
+    window.location.href = "https://platform.ads.ahaglobal.io/login";
+  };
+  
+  const handleGetStarted = () => {
+    window.location.href = "https://platform.ads.ahaglobal.io/login";
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -21,7 +29,7 @@ const Navbar = () => {
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <div className="flex items-center">
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center">
             <img 
               src="/Aha-ads-logo-long-5245x1200.png" 
               alt="Aha Platform" 
@@ -31,13 +39,13 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+          <a href="https://ads.ahaglobal.io/competitor" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
             Features
           </a>
-          <a href="#how-it-works" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+          <a href="https://ads.ahaglobal.io/how-it-works" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
             How it Works
           </a>
-          <a href="#pricing" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+          <a href="https://ads.ahaglobal.io/cost" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
             Pricing
           </a>
           <a href="#testimonials" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
@@ -46,10 +54,10 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm" className="h-9">
+          <Button variant="outline" size="sm" className="h-9" onClick={handleSignIn}>
             Sign In
           </Button>
-          <Button size="sm" className="h-9">
+          <Button size="sm" className="h-9" onClick={handleGetStarted}>
             Get Started
           </Button>
         </div>
@@ -73,21 +81,21 @@ const Navbar = () => {
         <div className="md:hidden bg-white/95 backdrop-blur-lg shadow-lg transition-all duration-300 animate-fade-down">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a 
-              href="#features" 
+              href="https://ads.ahaglobal.io/competitor" 
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-primary/10 hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Features
             </a>
             <a 
-              href="#how-it-works" 
+              href="https://ads.ahaglobal.io/how-it-works" 
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-primary/10 hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               How it Works
             </a>
             <a 
-              href="#pricing" 
+              href="https://ads.ahaglobal.io/cost" 
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-primary/10 hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -101,10 +109,10 @@ const Navbar = () => {
               Testimonials
             </a>
             <div className="pt-4 flex flex-col space-y-2">
-              <Button variant="outline" className="w-full justify-center">
+              <Button variant="outline" className="w-full justify-center" onClick={handleSignIn}>
                 Sign In
               </Button>
-              <Button className="w-full justify-center">
+              <Button className="w-full justify-center" onClick={handleGetStarted}>
                 Get Started
               </Button>
             </div>
