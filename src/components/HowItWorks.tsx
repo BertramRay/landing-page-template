@@ -1,31 +1,30 @@
-
 import React from 'react';
-import { Bot, Search, FileText, Zap, ArrowRight } from 'lucide-react';
+import { Search, Users, LineChart, Zap, ArrowRight, Target, DollarSign } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const steps = [
   {
     icon: <Search className="h-10 w-10 text-white" strokeWidth={1.5} />,
-    title: "Trend Analysis",
-    description: "SEOBot scans the web to identify trending topics and high-performing content in your industry.",
+    title: "Define Your Campaign",
+    description: "Set your campaign goals, target audience, and budget parameters to start the influencer matching process.",
     color: "bg-blue-600"
   },
   {
-    icon: <Bot className="h-10 w-10 text-white" strokeWidth={1.5} />,
-    title: "Content Generation",
-    description: "Our AI processes the data and generates original, SEO-optimized blog posts tailored to your audience.",
+    icon: <Users className="h-10 w-10 text-white" strokeWidth={1.5} />,
+    title: "AI Matching",
+    description: "Our AI analyzes thousands of influencers to find the perfect match based on your brand values and audience demographics.",
     color: "bg-indigo-600"
   },
   {
-    icon: <FileText className="h-10 w-10 text-white" strokeWidth={1.5} />,
-    title: "SEO Optimization",
-    description: "Each piece of content is structured with optimal headings, keywords, and meta tags for maximum visibility.",
+    icon: <Target className="h-10 w-10 text-white" strokeWidth={1.5} />,
+    title: "Execute Campaign",
+    description: "Manage content approvals, coordinate posting schedules, and track deliverables through our streamlined workflow.",
     color: "bg-purple-600"
   },
   {
-    icon: <Zap className="h-10 w-10 text-white" strokeWidth={1.5} />,
-    title: "Publish & Rank",
-    description: "Publish directly to your website and watch your content climb the search rankings and drive traffic.",
+    icon: <LineChart className="h-10 w-10 text-white" strokeWidth={1.5} />,
+    title: "Analyze Results",
+    description: "Track real-time performance metrics across all platforms and optimize future campaigns with detailed insights.",
     color: "bg-pink-600"
   }
 ];
@@ -37,9 +36,9 @@ const HowItWorks = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">How SEOBot Works</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">How ahalab Works</h2>
           <p className="text-lg text-muted-foreground">
-            Our streamlined process automates your content creation from trend analysis to publishing, saving you time while delivering results.
+            Our streamlined platform connects brands with the perfect influencers and manages your campaigns from planning to performance analysis.
           </p>
         </div>
         
@@ -67,18 +66,54 @@ const HowItWorks = () => {
         </div>
         
         <div className="mt-20 bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
-          <div className="flex flex-col items-center text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">Ready to automate your SEO content?</h3>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-              Join thousands of businesses saving time and resources with SEOBot's AI-powered content generation.
-            </p>
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="md:w-2/3">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">Secure, Transparent Payments</h3>
+              <p className="text-lg text-muted-foreground mb-8">
+                ahalab's escrow payment system ensures security for both brands and influencers, releasing funds only when campaign milestones are met and verified.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="group">
+                  Start Your First Campaign
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+                <p className="mt-4 sm:mt-0 text-sm text-muted-foreground flex items-center">
+                  <DollarSign className="h-4 w-4 text-green-500 mr-1" />
+                  No upfront fees. Pay only for successful campaigns.
+                </p>
+              </div>
+            </div>
             
-            <Button size="lg" className="group">
-              Start Your Free Trial
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            
-            <p className="mt-4 text-sm text-muted-foreground">No credit card required. 14-day free trial.</p>
+            <div className="md:w-1/3 bg-gradient-to-br from-primary/10 to-purple-500/10 p-6 rounded-xl">
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="font-semibold">Campaign Payment</div>
+                  <div className="text-green-500 text-sm font-medium">Secure</div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-muted-foreground">Campaign Budget</span>
+                    <span className="font-medium">$10,000</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-muted-foreground">Platform Fee</span>
+                    <span className="font-medium">$500</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-muted-foreground">Tax</span>
+                    <span className="font-medium">$100</span>
+                  </div>
+                  <div className="border-t pt-2 flex justify-between items-center font-semibold">
+                    <span>Total</span>
+                    <span>$10,600</span>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <div className="w-full bg-primary text-white py-2 rounded text-center text-sm font-medium">Protected by ahalab Escrow</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,43 +1,44 @@
-
 import React, { useState } from 'react';
-import { Check, Bot, Zap, Globe } from 'lucide-react';
+import { Check, Users, Zap, Globe, BarChart3, Shield, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 
 const plans = [
   {
     name: "Starter",
-    description: "Perfect for small websites and blogs just getting started with SEO.",
+    description: "Perfect for small brands looking to start with influencer marketing.",
     price: {
-      monthly: 29,
-      annual: 24
+      monthly: 99,
+      annual: 84
     },
     features: [
-      "5 AI-generated blog posts per month",
-      "Basic SEO optimization",
-      "Automated keyword research",
-      "Content scheduling",
+      "Up to 5 simultaneous campaigns",
+      "Access to 5,000+ micro-influencers",
+      "Basic AI matching",
+      "Secure payment processing",
+      "Campaign analytics dashboard",
       "Email support"
     ],
     cta: "Start Free Trial",
-    icon: <Bot className="h-6 w-6" strokeWidth={1.5} />,
+    icon: <Users className="h-6 w-6" strokeWidth={1.5} />,
     popular: false
   },
   {
-    name: "Professional",
-    description: "Ideal for growing businesses focused on improving their online presence.",
+    name: "Growth",
+    description: "Ideal for growing brands focused on scaling their influencer strategy.",
     price: {
-      monthly: 79,
-      annual: 67
+      monthly: 249,
+      annual: 199
     },
     features: [
-      "25 AI-generated blog posts per month",
-      "Advanced SEO optimization",
-      "Trend analysis and monitoring",
-      "Custom content templates",
-      "Content scheduling",
+      "Up to 15 simultaneous campaigns",
+      "Access to 15,000+ influencers",
+      "Advanced AI matching algorithm",
+      "Strategy planning assistance",
+      "Detailed performance analytics",
+      "Secure payment processing",
       "Priority email support",
-      "Analytics dashboard"
+      "Cross-platform campaign coordination"
     ],
     cta: "Start Free Trial",
     icon: <Zap className="h-6 w-6" strokeWidth={1.5} />,
@@ -45,24 +46,24 @@ const plans = [
   },
   {
     name: "Business",
-    description: "For websites and companies with serious content needs and SEO goals.",
+    description: "For established brands with serious influencer marketing goals.",
     price: {
-      monthly: 199,
-      annual: 167
+      monthly: 499,
+      annual: 424
     },
     features: [
-      "Unlimited AI-generated blog posts",
-      "Enterprise-grade SEO optimization",
-      "Advanced trend analysis and scraping",
-      "Custom content templates",
-      "Multi-user access",
-      "Content scheduling",
+      "Unlimited campaigns",
+      "Access to all influencers including premium",
+      "Premium AI matching with audience overlap",
+      "Custom marketing strategy generation",
+      "Advanced analytics with ROI forecasting",
+      "Multi-user access with roles",
+      "Dedicated account manager",
       "Priority phone & email support",
-      "Advanced analytics dashboard",
-      "API access"
+      "API access for custom integrations"
     ],
     cta: "Start Free Trial",
-    icon: <Globe className="h-6 w-6" strokeWidth={1.5} />,
+    icon: <Briefcase className="h-6 w-6" strokeWidth={1.5} />,
     popular: false
   }
 ];
@@ -76,9 +77,9 @@ const Pricing = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Flexible Pricing for Every Brand</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Choose the plan that's right for your business. All plans include a 14-day free trial.
+            Choose the plan that matches your influencer marketing needs. All plans include a 14-day free trial.
           </p>
           
           <div className="flex items-center justify-center space-x-2">
@@ -157,30 +158,41 @@ const Pricing = () => {
         
         <div className="mt-16 p-8 bg-white rounded-2xl shadow-lg border border-gray-100 max-w-4xl mx-auto">
           <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
+            <h3 className="text-2xl font-bold mb-2">For Influencers</h3>
             <p className="text-muted-foreground">
-              Need a custom solution? We offer tailored plans for larger organizations.
+              Joining ahalab as an influencer is completely free. Get matched with brands that align with your content.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
             <div className="flex items-center">
               <Check className="h-5 w-5 text-primary mr-2" />
-              <span>Custom content volume</span>
+              <span>Free profile creation</span>
             </div>
             <div className="flex items-center">
               <Check className="h-5 w-5 text-primary mr-2" />
-              <span>Dedicated account manager</span>
+              <span>Secure payment system</span>
             </div>
             <div className="flex items-center">
               <Check className="h-5 w-5 text-primary mr-2" />
-              <span>Custom integrations</span>
+              <span>Performance analytics</span>
             </div>
           </div>
           
           <div className="mt-6 text-center">
-            <Button variant="outline">Contact Sales</Button>
+            <Button variant="outline">Register as Influencer</Button>
           </div>
+        </div>
+        
+        <div className="mt-8 bg-gradient-to-r from-primary/10 to-indigo-500/10 rounded-2xl p-8 max-w-4xl mx-auto text-center">
+          <div className="flex justify-center mb-4">
+            <Shield className="h-10 w-10 text-primary" strokeWidth={1.5} />
+          </div>
+          <h3 className="text-xl font-bold mb-2">No commission on campaign budgets</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Unlike other platforms, ahalab doesn't take a percentage of your influencer campaign budget. 
+            You only pay the platform fee based on your plan - the rest goes directly to creators.
+          </p>
         </div>
       </div>
     </section>

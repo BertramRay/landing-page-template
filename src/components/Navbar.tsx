@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from 'react';
-import { Menu, X, Globe, Bot } from 'lucide-react';
+import { Menu, X, Globe, Users, Database, LineChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -23,8 +22,8 @@ const Navbar = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <div className="flex items-center">
           <a href="#" className="flex items-center space-x-2">
-            <Bot className="w-8 h-8 text-primary" strokeWidth={1.5} />
-            <span className="font-bold text-xl">SEOBot</span>
+            <Users className="w-8 h-8 text-primary" strokeWidth={1.5} />
+            <span className="font-bold text-xl">ahalab</span>
           </a>
         </div>
         

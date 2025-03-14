@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ArrowRight, Bot } from 'lucide-react';
+import { ArrowRight, Users, Globe, Instagram, Youtube, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -15,16 +14,16 @@ const CTA = () => {
             <div className="max-w-3xl mx-auto">
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-white/10 rounded-full">
-                  <Bot className="h-10 w-10 text-white" strokeWidth={1.5} />
+                  <Users className="h-10 w-10 text-white" strokeWidth={1.5} />
                 </div>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-                Start creating SEO-optimized content today
+                Launch your influencer marketing campaign today
               </h2>
               
               <p className="text-lg md:text-xl text-center text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses that are automating their content creation and boosting their search rankings with SEOBot.
+                Join thousands of brands that are scaling their marketing reach through ahalab's intelligent influencer matching platform.
               </p>
               
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl max-w-2xl mx-auto">
@@ -50,59 +49,38 @@ const CTA = () => {
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="inline-flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary h-8 w-8">
-                <path d="M12 2v8"></path>
-                <path d="m4.93 10.93 1.41 1.41"></path>
-                <path d="M2 18h2"></path>
-                <path d="M20 18h2"></path>
-                <path d="m19.07 10.93-1.41 1.41"></path>
-                <path d="M22 22H2"></path>
-                <path d="M16 6 8 14"></path>
-                <path d="M16 14H8V6"></path>
-              </svg>
+              <Globe className="text-primary h-8 w-8" strokeWidth={1.5} />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Quick Setup</h3>
+            <h3 className="text-xl font-semibold mb-2">Global Reach</h3>
             <p className="text-muted-foreground">
-              Get up and running in minutes with our simple onboarding process.
+              Connect with influencers across multiple platforms and countries to expand your brand's global presence.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full mb-4">
+              <div className="flex items-center justify-center space-x-1">
+                <Instagram className="text-primary h-5 w-5" strokeWidth={1.5} />
+                <Youtube className="text-primary h-5 w-5" strokeWidth={1.5} />
+                <Twitter className="text-primary h-5 w-5" strokeWidth={1.5} />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Multi-Platform Support</h3>
+            <p className="text-muted-foreground">
+              Launch coordinated campaigns across YouTube, Instagram, TikTok, LinkedIn, and Twitter from a single dashboard.
             </p>
           </div>
           
           <div className="text-center">
             <div className="inline-flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary h-8 w-8">
-                <path d="M20 22h-2"></path>
-                <path d="M20 15v2"></path>
-                <path d="M4 22H2"></path>
-                <path d="M4 15v7"></path>
-                <path d="M18 22h-8"></path>
-                <path d="M9 2v4"></path>
-                <path d="M6 2h6"></path>
-                <path d="M8 8V6"></path>
-                <path d="M10 8V6"></path>
-                <path d="M7 11a5 5 0 0 0 10 0c0-2-2-3-2-3"></path>
+                <path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path>
+                <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path>
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
+            <h3 className="text-xl font-semibold mb-2">Strategic Guidance</h3>
             <p className="text-muted-foreground">
-              Our dedicated support team is available around the clock to help you succeed.
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary h-8 w-8">
-                <path d="M5.8 11.3 2 22l10.7-3.79"></path>
-                <path d="M4 3h.01"></path>
-                <path d="M22 8h.01"></path>
-                <path d="M15 2h.01"></path>
-                <path d="M22 20h.01"></path>
-                <path d="m22 2-8 11 8-3"></path>
-                <path d="M9 13 2 2"></path>
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Constant Improvements</h3>
-            <p className="text-muted-foreground">
-              We regularly update our AI algorithms to ensure you get the best results.
+              Get AI-powered campaign strategy recommendations based on your goals, audience, and current market trends.
             </p>
           </div>
         </div>

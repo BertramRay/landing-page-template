@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowRight, Bot, Search, TrendingUp, LayoutTemplate } from 'lucide-react';
+import { ArrowRight, Users, Search, TrendingUp, LayoutTemplate, DollarSign, LineChart, Instagram, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -11,11 +11,11 @@ const Hero = () => {
   const typingTimerRef = useRef<NodeJS.Timeout | null>(null);
   
   const textVariants = [
-    'AI Precision',
-    'AI Intelligence',
-    'Machine Learning',
-    'Neural Networks',
-    'Smart Algorithms'
+    'YouTube',
+    'TikTok',
+    'Instagram',
+    'LinkedIn',
+    'Twitter'
   ];
 
   useEffect(() => {
@@ -90,11 +90,11 @@ const Hero = () => {
           <div className={`max-w-xl lg:max-w-2xl space-y-8 text-center lg:text-left transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
               <span className="animate-pulse-slow">NEW</span>
-              <span className="ml-2">AI-Powered SEO Content Generation</span>
+              <span className="ml-2">AI-Powered Influencer Marketing Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight hero-text-gradient">
-              Automate Your SEO Content With
+              Connect Your Brand With Top
             </h1>
             <div className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary">
               <span className="inline-block relative">
@@ -102,9 +102,12 @@ const Hero = () => {
                 <span className="absolute top-0 right-0 h-full w-[3px] bg-primary/70 animate-border-pulse"></span>
               </span>
             </div>
+            <div className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight hero-text-gradient">
+              Influencers
+            </div>
             
             <p className="text-lg md:text-xl text-muted-foreground">
-              SEOBot automatically generates high-performing blog content optimized for search engines by analyzing trending topics and crafting engaging articles that drive traffic.
+              ahalab connects advertisers with influential creators across social platforms using advanced AI matching, secure payments, and detailed analytics to maximize your campaign ROI.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
@@ -119,20 +122,20 @@ const Hero = () => {
             
             <div className="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4">
               <div className="flex items-center space-x-2">
-                <Bot className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">AI-Powered</span>
+                <Users className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">AI Matching</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Search className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">SEO Optimized</span>
+                <DollarSign className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Secure Payments</span>
               </div>
               <div className="flex items-center space-x-2">
-                <TrendingUp className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Trend Analysis</span>
+                <LineChart className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Data Analytics</span>
               </div>
               <div className="flex items-center space-x-2">
                 <LayoutTemplate className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Content Ready</span>
+                <span className="text-sm font-medium">Strategy Planning</span>
               </div>
             </div>
           </div>
@@ -146,8 +149,8 @@ const Hero = () => {
                 {/* Dashboard header */}
                 <div className="bg-gradient-to-r from-primary/90 to-blue-600/90 px-6 py-4 flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <Bot className="h-5 w-5 text-white" />
-                    <span className="text-white font-semibold">SEOBot Dashboard</span>
+                    <Users className="h-5 w-5 text-white" />
+                    <span className="text-white font-semibold">ahalab Dashboard</span>
                   </div>
                   <div className="flex space-x-1">
                     <div className="w-3 h-3 rounded-full bg-white/30"></div>
@@ -162,31 +165,53 @@ const Hero = () => {
                   <div className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                      <span className="text-sm font-medium">AI Agent Active</span>
+                      <span className="text-sm font-medium">Campaign Active</span>
                     </div>
-                    <span className="text-xs text-muted-foreground">Last activity: 2m ago</span>
+                    <span className="text-xs text-muted-foreground">Last update: 5m ago</span>
                   </div>
                   
                   {/* Content generation card */}
                   <div className="bg-gray-50 rounded-lg p-4">
-                    <h3 className="text-sm font-semibold mb-2">Generated Content</h3>
+                    <h3 className="text-sm font-semibold mb-2">Suggested Influencers</h3>
                     <div className="space-y-2">
-                      <div className="h-4 bg-gray-200 rounded-full w-full shimmer"></div>
-                      <div className="h-4 bg-gray-200 rounded-full w-3/4 shimmer"></div>
-                      <div className="h-4 bg-gray-200 rounded-full w-5/6 shimmer"></div>
-                      <div className="h-4 bg-gray-200 rounded-full w-2/3 shimmer"></div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <div className="w-8 h-8 bg-gray-200 rounded-full mr-2"></div>
+                          <div>
+                            <div className="h-4 w-24 bg-gray-200 rounded-full shimmer"></div>
+                            <div className="h-3 w-16 bg-gray-200 rounded-full mt-1 shimmer"></div>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Instagram className="h-4 w-4 text-pink-500" />
+                          <div className="h-4 w-12 bg-gray-200 rounded-full shimmer"></div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <div className="w-8 h-8 bg-gray-200 rounded-full mr-2"></div>
+                          <div>
+                            <div className="h-4 w-20 bg-gray-200 rounded-full shimmer"></div>
+                            <div className="h-3 w-16 bg-gray-200 rounded-full mt-1 shimmer"></div>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Youtube className="h-4 w-4 text-red-500" />
+                          <div className="h-4 w-12 bg-gray-200 rounded-full shimmer"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <h3 className="text-xs font-medium text-muted-foreground mb-1">Blogs Generated</h3>
-                      <p className="text-2xl font-bold">247</p>
+                      <h3 className="text-xs font-medium text-muted-foreground mb-1">Campaigns</h3>
+                      <p className="text-2xl font-bold">24</p>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <h3 className="text-xs font-medium text-muted-foreground mb-1">Avg. Word Count</h3>
-                      <p className="text-2xl font-bold">1,243</p>
+                      <h3 className="text-xs font-medium text-muted-foreground mb-1">Total Reach</h3>
+                      <p className="text-2xl font-bold">4.2M</p>
                     </div>
                   </div>
                   
@@ -194,13 +219,13 @@ const Hero = () => {
                   <div className="bg-gray-50 rounded-lg p-4">
                     <h3 className="text-sm font-semibold mb-2 flex items-center">
                       <TrendingUp className="w-4 h-4 mr-1 text-primary" />
-                      Trending Topics
+                      Trending Categories
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">AI Content</span>
-                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">SEO Strategy</span>
-                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Voice Search</span>
-                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">E-commerce</span>
+                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Beauty</span>
+                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Tech</span>
+                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Fitness</span>
+                      <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Fashion</span>
                     </div>
                   </div>
                 </div>
