@@ -1,6 +1,6 @@
-# Aha Platform 已实现链接
+# landing page template 已实现链接
 
-本文档收集了 Aha Platform 网站上所有已实现的实际链接，包括按钮和可点击元素。
+本文档收集了 landing page template 网站上所有已实现的实际链接，包括按钮和可点击元素。可根据需要进行替换。
 
 ## 导航栏 (Navbar)
 
